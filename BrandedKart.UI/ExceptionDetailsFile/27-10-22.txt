@@ -1,0 +1,44 @@
+-----------Exception Details on  27/10/2022 07:11:03 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 27/10/2022 07:11:03 م
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/Auth/CustomerRegisteration' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/Auth/CustomerRegisteration
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  10/27/2022 8:26:56 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 10/27/2022 8:26:56 PM
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/Auth/CustomerRegisteration' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/Auth/CustomerRegisteration
+
+
+--------------------------------*End*------------------------------------------
+
+
+

@@ -1,0 +1,44 @@
+-----------Exception Details on  02/12/2022 05:18:11 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 02/12/2022 05:18:11 م
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Product/FilterProduct/GetAllProducts' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Product/FilterProduct/GetAllProducts
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  02/12/2022 07:24:32 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 02/12/2022 07:24:32 م
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Product/FilterProduct/GetAllProducts' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Product/FilterProduct/GetAllProducts
+
+
+--------------------------------*End*------------------------------------------
+
+
+

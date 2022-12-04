@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Brandedkart.DTO.Product.ProductDTO>
+
+
+@if (Model.Any())
+{
+    foreach (var product in Model)
+    {
+        <a class="product-id" href="/Product/Details/@product.Product_ID">
+            <li class="list-group-item mb-3">
+                <!-- Custom content-->
+                <div class="media align-items-lg-center d-flex flex-lg-row p-3">
+                    <div class="media-body order-2 order-lg-1">
+                        <h5 class="mt-0 fw-bold mb-2" style="font-size:20px;">@product.Product_Name</h5>
+                        <p class="font-italic text-muted mb-0 small">@product.Product_Description</p>
+                        <div class="d-flex align-items-center justify-content-between mt-1">
+                            <h6 class="fw-bold my-2">OMR @product.Product_Price</h6>
+                            <ul class="list-inline small">
+                                <li class="list-inline-item m-0"><i class="fa fa-star text-danger"></i></li>
+                                <li class="list-inline-item m-0"><i class="fa fa-star text-danger"></i></li>
+                                <li class="list-inline-item m-0"><i class="fa fa-star "></i></li>
+                                <li class="list-inline-item m-0"><i class="fa fa-star "></i></li>
+                                <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <img src="@Url.Content(product.Product_ImagePath)" alt="Product Image" width="200" class="ml-lg-5 order-1 order-lg-2 rounded-3">
+                </div> <!-- End -->
+            </li>
+        </a>
+
+    }
+}

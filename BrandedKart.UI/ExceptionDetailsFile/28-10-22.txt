@@ -1,0 +1,858 @@
+-----------Exception Details on  28/10/2022 05:15:26 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 05:15:26 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/CustomerOrder/Checkout' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/CustomerOrder/Checkout
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 05:50:26 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 05:50:26 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Product/Customer/AddCart' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Product/Customer/AddCart
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 05:50:27 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 05:50:27 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Product/Customer/AddCart' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Product/Customer/AddCart
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 05:52:09 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 05:52:09 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Product/Customer/AddCart' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Product/Customer/AddCart
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 05:52:09 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 05:52:09 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Product/Customer/AddCart' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Product/Customer/AddCart
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 05:57:46 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 05:57:46 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/cart' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/cart
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 06:10:07 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 06:10:07 ص
+
+Error Line No : nously)
+
+Error Message: InvalidOperationException
+
+Exception Type: System.InvalidOperationException
+
+Error Location : An error occurred when trying to create a controller of type 'BrandedKart.UI.Areas.Customer.Controllers.CustomerOrderController'. Make sure that the controller has a parameterless public constructor.
+
+ Error Page Url: https://localhost:44342/Checkout
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 06:11:25 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 06:11:25 ص
+
+Error Line No : nously)
+
+Error Message: InvalidOperationException
+
+Exception Type: System.InvalidOperationException
+
+Error Location : An error occurred when trying to create a controller of type 'BrandedKart.UI.Areas.Customer.Controllers.CustomerOrderController'. Make sure that the controller has a parameterless public constructor.
+
+ Error Page Url: https://localhost:44342/Checkout
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 06:11:31 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 06:11:31 ص
+
+Error Line No : nously)
+
+Error Message: InvalidOperationException
+
+Exception Type: System.InvalidOperationException
+
+Error Location : An error occurred when trying to create a controller of type 'BrandedKart.UI.Areas.Customer.Controllers.CustomerOrderController'. Make sure that the controller has a parameterless public constructor.
+
+ Error Page Url: https://localhost:44342/Checkout
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 06:12:14 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 06:12:14 ص
+
+Error Line No : nously)
+
+Error Message: InvalidOperationException
+
+Exception Type: System.InvalidOperationException
+
+Error Location : An error occurred when trying to create a controller of type 'BrandedKart.UI.Areas.Customer.Controllers.CustomerOrderController'. Make sure that the controller has a parameterless public constructor.
+
+ Error Page Url: https://localhost:44342/Checkout
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 06:12:17 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 06:12:17 ص
+
+Error Line No : nously)
+
+Error Message: InvalidOperationException
+
+Exception Type: System.InvalidOperationException
+
+Error Location : An error occurred when trying to create a controller of type 'BrandedKart.UI.Areas.Customer.Controllers.CustomerOrderController'. Make sure that the controller has a parameterless public constructor.
+
+ Error Page Url: https://localhost:44342/Checkout
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 06:12:19 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 06:12:19 ص
+
+Error Line No : nously)
+
+Error Message: InvalidOperationException
+
+Exception Type: System.InvalidOperationException
+
+Error Location : An error occurred when trying to create a controller of type 'BrandedKart.UI.Areas.Customer.Controllers.CustomerOrderController'. Make sure that the controller has a parameterless public constructor.
+
+ Error Page Url: https://localhost:44342/Checkout
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 06:13:00 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 06:13:00 ص
+
+Error Line No : nously)
+
+Error Message: InvalidOperationException
+
+Exception Type: System.InvalidOperationException
+
+Error Location : An error occurred when trying to create a controller of type 'BrandedKart.UI.Areas.Customer.Controllers.CustomerOrderController'. Make sure that the controller has a parameterless public constructor.
+
+ Error Page Url: https://localhost:44342/Checkout
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 06:13:01 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 06:13:01 ص
+
+Error Line No : nously)
+
+Error Message: InvalidOperationException
+
+Exception Type: System.InvalidOperationException
+
+Error Location : An error occurred when trying to create a controller of type 'BrandedKart.UI.Areas.Customer.Controllers.CustomerOrderController'. Make sure that the controller has a parameterless public constructor.
+
+ Error Page Url: https://localhost:44342/Checkout
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 06:13:02 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 06:13:02 ص
+
+Error Line No : nously)
+
+Error Message: InvalidOperationException
+
+Exception Type: System.InvalidOperationException
+
+Error Location : An error occurred when trying to create a controller of type 'BrandedKart.UI.Areas.Customer.Controllers.CustomerOrderController'. Make sure that the controller has a parameterless public constructor.
+
+ Error Page Url: https://localhost:44342/Checkout
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 06:14:58 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 06:14:58 ص
+
+Error Line No : nously)
+
+Error Message: InvalidOperationException
+
+Exception Type: System.InvalidOperationException
+
+Error Location : An error occurred when trying to create a controller of type 'BrandedKart.UI.Areas.Customer.Controllers.CustomerOrderController'. Make sure that the controller has a parameterless public constructor.
+
+ Error Page Url: https://localhost:44342/Checkout
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 06:16:12 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 06:16:12 ص
+
+Error Line No : nously)
+
+Error Message: InvalidOperationException
+
+Exception Type: System.InvalidOperationException
+
+Error Location : An error occurred when trying to create a controller of type 'BrandedKart.UI.Areas.Customer.Controllers.CustomerOrderController'. Make sure that the controller has a parameterless public constructor.
+
+ Error Page Url: https://localhost:44342/Checkout
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 06:21:53 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 06:21:53 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/CustomerCart/ViewCart' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/CustomerCart/ViewCart
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 06:22:30 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 06:22:30 ص
+
+Error Line No : nously)
+
+Error Message: InvalidOperationException
+
+Exception Type: System.InvalidOperationException
+
+Error Location : An error occurred when trying to create a controller of type 'BrandedKart.UI.Areas.Customer.Controllers.CustomerOrderController'. Make sure that the controller has a parameterless public constructor.
+
+ Error Page Url: https://localhost:44342/Checkout
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 06:22:37 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 06:22:37 ص
+
+Error Line No : nously)
+
+Error Message: InvalidOperationException
+
+Exception Type: System.InvalidOperationException
+
+Error Location : An error occurred when trying to create a controller of type 'BrandedKart.UI.Areas.Customer.Controllers.CustomerOrderController'. Make sure that the controller has a parameterless public constructor.
+
+ Error Page Url: https://localhost:44342/Checkout
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 06:58:29 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 06:58:29 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/CustomerOrder/Checkout' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/CustomerOrder/Checkout
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 08:04:21 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 08:04:21 م
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/Auth/CustomerRegisteration' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/Auth/CustomerRegisteration
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 08:09:56 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 08:09:56 م
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/Auth/CustomerRegisteration' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/Auth/CustomerRegisteration
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 08:26:38 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 08:26:38 م
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/Auth/CustomerRegisteration' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/Auth/CustomerRegisteration
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 08:42:25 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 08:42:25 م
+
+Error Line No : Result)
+
+Error Message: HttpCompileException
+
+Exception Type: System.Web.HttpCompileException
+
+Error Location : C:\Users\ACER\source\repos\Branded kart\BrandedKart.UI\Areas\Customer\Views\Auth\CustomerRegisteration.cshtml(14): error CS1026: ) expected
+
+ Error Page Url: https://localhost:44342/Customer/Register
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 08:56:39 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 08:56:39 م
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/Auth/CustomerSignIn' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/Auth/CustomerSignIn
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 08:57:48 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 08:57:48 م
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/Auth/CustomerRegistration' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/Auth/CustomerRegistration
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 09:02:55 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 09:02:55 م
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/Auth/CustomerSignIn' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/Auth/CustomerSignIn
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 09:05:19 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 09:05:19 م
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/Auth/CustomerSignIn' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/Auth/CustomerSignIn
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 09:06:06 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 09:06:06 م
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/Auth/CustomerSignIn' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/Auth/CustomerSignIn
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 09:15:05 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 09:15:05 م
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/Auth/CustomerSignIn' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/Auth/CustomerSignIn
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 09:15:42 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 09:15:42 م
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/Auth/CustomerSignIn' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/Auth/CustomerSignIn
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 09:24:35 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 09:24:35 م
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/Auth/CustomerRegistration' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/Auth/CustomerRegistration
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 09:44:05 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 09:44:05 م
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/Auth/CustomerSignIn' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/Auth/CustomerSignIn
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 10:11:29 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 10:11:29 م
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/Auth/CustomerSignIn' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/Auth/CustomerSignIn
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 10:13:33 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 10:13:33 م
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/Auth/CustomerRegisteration' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/Auth/CustomerRegisteration
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 10:18:51 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 10:18:51 م
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/Auth/CustomerRegisteration' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/Auth/CustomerRegisteration
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 10:22:16 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 10:22:16 م
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/Auth/CustomerSignIn' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/Auth/CustomerSignIn
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  28/10/2022 10:23:27 م-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 28/10/2022 10:23:27 م
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/Auth/CustomerRegisteration' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/Auth/CustomerRegisteration
+
+
+--------------------------------*End*------------------------------------------
+
+
+

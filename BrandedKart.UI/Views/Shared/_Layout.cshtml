@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Branded Kart</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/carousel.css">
+    <script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    @RenderSection("StyleSheets", false)
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+
+    <nav class="py-2 border-bottom navbar-fixed-top" style="background-color: #4682B4; ">
+        <div class="container d-flex flex-wrap">
+            <ul class="nav me-auto">
+                <li class="nav-item"><a href="" class="nav-link link-dark px-2 active text-white" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-dark px-2 text-white">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-dark px-2 text-white">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-dark px-2 text-white">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-dark px-2 text-white">About</a></li>
+                @Html.Action("GetCartItemCount", "Home", new { @area = "" })
+            </ul>
+            <ul class="nav">
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item">@Html.ActionLink(User.Identity.Name, "", null, new { @class = "nav-link link-dark px-2 text-white fw-bold" })</li>
+                    <li class="nav-item">@Html.ActionLink("Logout", "", "Logout", new { area = "" }, new { @class = "nav-link link-dark px-2 text-white fw-bold" })</li>
+                }
+                else
+                {
+                    <li class="nav-item ">@Html.ActionLink("Login", "SignIn", new { area = "", controller = "Customer" }, new { @class = "nav-link link-dark text-white fw-bold" })</li>
+                    <li class="nav-item">@Html.ActionLink("Register", "Register", new { area = "", controller = "Customer" }, new { @class = "nav-link link-dark px-2 text-white fw-bold" })</li>
+                }
+                @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                {
+                    <li class="mx-5 nav-item">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Admin Tasks
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <button class="dropdown-item" type="button">@Html.ActionLink("Create Product", "Create", new { area = "Admin", controller = "Product" }, new { @class = "nav-link link-dark px-2" })</button>
+                                <button class="dropdown-item" type="button">@Html.ActionLink("View Orders", "Register", new { area = "", controller = "Customer" }, new { @class = "nav-link link-dark px-2" })</button>
+                                <button class="dropdown-item" type="button">@Html.ActionLink("Dashboard", "Register", new { area = "", controller = "Customer" }, new { @class = "nav-link link-dark px-2" })</button>
+                            </div>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+    </nav>
+    <header class="py-3 mb-4 border-bottom border-dark border-1 bg-dark">
+        <div class="container d-flex flex-wrap justify-content-center">
+            <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap" /></svg>
+                <span class="fw-bold fst-italic text-white"><b>Branded Kart</b></span>
+            </a>
+            @using (Html.BeginForm("", "Products", new { area = "", controller = "", action = "GetAllProducts" }, FormMethod.Get))
+            {
+                <div class="col-12 col-lg-auto mb-3 mb-lg-0">
+                    @Html.TextBox("productName", "", new { @class = "form-control", type = "search", placeholder = "Search..." })
+                </div>
+            }
+        </div>
+    </header>
+
+    <div class="body-content">
+        @RenderBody()
+        <hr />
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fab fa-facebook"></i>
+                </a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fab fa-google"></i>
+                </a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fab fa-github"></i>
+                </a>
+            </section>
+            <!-- Section: Social media -->
+            <!-- Section: Form -->
+            <section class="">
+                <form action="">
+                    <!--Grid row-->
+                    <div class="row justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-2">
+                            <p class="pt-2">
+                                <strong>Sign up for our newsletter</strong>
+                            </p>
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                            <!-- Email input -->
+                            <div class="form-outline form-white mb-4">
+
+                                <input type="email" id="form5Example21" class="form-control" placeholder="Email Address" />
+
+                            </div>
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-outline-light mb-4">
+                                Subscribe
+                            </button>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </form>
+            </section>
+            <!-- Section: Form -->
+            <!-- Section: Text -->
+            <section class="mb-4">
+                <p>
+                    The company provides products such as apparel, auto and industrial items, beauty and health products, electronics, grocery, books, games, jewellery, kids and baby products, movies, music, sports goods, toys, tools and other related products.
+                </p>
+            </section>
+            <!-- Section: Text -->
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Features</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Products</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Events</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Forums</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Category</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Fashion</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Lifestyle</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Makeup</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Arts</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Contact</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Office Almariah Muscat, Oman</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Contact@BrandedKArt.com</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">+968 938276732</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">+968 232344324</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            <span class="text-muted">&copy; 2022 Branded kart. All Rights Reserved</span>
+
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

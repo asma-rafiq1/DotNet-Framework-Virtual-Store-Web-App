@@ -1,0 +1,86 @@
+﻿@model Brandedkart.DTO.Product.ProductDTO
+@using Brandedkart.DTO.Product
+
+@section stylesheets{
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+}
+
+
+@section Scripts{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+}
+
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center border p-5 rounded-3">
+            @*@Html.Image(Model.Product_ImagePath,"img")*@
+            <div class="col-md-4">
+                <img class="card-img-top mb-5 mb-md-0 h-50 w-50" src="@Url.Content(Model.Product_ImagePath)" alt="..." />
+            </div>
+            <div class="col-md-6">
+                <div class="small mb-1">SKU: @Model.Product_SKU</div>
+                <h1 class="display-5 fw-bolder">@Model.Product_Name</h1>
+                <div class="fs-5 mb-5">
+                    <span class="">OMR @Model.Product_Price</span>
+
+                </div>
+                <p class="lead">@Model.Product_Description</p>
+
+
+
+                @if (ViewBag.CartItems != null)
+                {
+                    var cartItems = ViewBag.CartItems as Dictionary<int, int>;
+                    foreach (var item in cartItems)
+                    {
+                        if (item.Key.Equals(Model.Product_ID))
+                        {
+                            <div class="col-4">
+                                @Ajax.ActionLink("Remove From Cart", "RemoveCart", new { controller = "customer", area = "", ProductID = Model.Product_ID }, new AjaxOptions() { HttpMethod = "GET" }, new { @class = "text-light text-decoration-none rounded btn-danger btn btn-sm flex-shrink-0 mt-5 " })
+                            </div>
+                            return;
+
+                        }
+
+
+                    }
+
+
+                    using (Ajax.BeginForm("AddCart", "Customer", new { area = "" }, new AjaxOptions { HttpMethod = "POST" }))
+                    {
+                        @Html.Hidden("ProductID", Model.Product_ID)
+                        <span class="form-text">Quanity</span>
+                        @Html.TextBox("Quantity", 1, new { @class = "form-control text-dark px-2 me-3", type = "number", style = "max-width: 7rem" })
+                        <button class="btn border-1 border-dark btn-outline-dark flex-shrink-0 mt-5" type="submit">
+                            <i class="bi-cart-fill me-1"></i>
+                            Add to cart
+                        </button>
+
+
+                    }
+
+
+
+                }
+                else
+                {
+                    using (Ajax.BeginForm("AddCart", "Customer", new { area = "" }, new AjaxOptions { HttpMethod = "POST" }))
+                    {
+                        @Html.Hidden("ProductID", Model.Product_ID)
+                        <span class="form-text">Quanity</span>
+                        @Html.TextBox("Quantity", 1, new { @class = "form-control text-dark px-2 me-3", type = "number", style = "max-width: 7rem" })
+                        <button class="btn border-1 border-dark btn-outline-dark flex-shrink-0 mt-5" type="submit">
+                            <i class="bi-cart-fill me-1"></i>
+                            Add to cart
+                        </button>
+
+                    }
+                }
+
+
+            </div>
+        </div>
+    </div>
+</section>

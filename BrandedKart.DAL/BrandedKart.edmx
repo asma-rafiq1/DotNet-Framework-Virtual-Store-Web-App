@@ -1,0 +1,676 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BrandedKartModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="AddressId" />
+          </Key>
+          <Property Name="AddressLine1" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="AddressLine2" Type="varchar" MaxLength="100" />
+          <Property Name="City" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="State" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Postal" Type="smallint" Nullable="false" />
+          <Property Name="Country" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="AddressId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="orderId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="Admin_Id" />
+          </Key>
+          <Property Name="Admin_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Admin_Name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Admin_Password" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Category_ID" />
+          </Key>
+          <Property Name="Category_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Category_Title" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="Category_Description" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Customer_ID" />
+          </Key>
+          <Property Name="Customer_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Full_Name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="Customer_Password" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Phone_Number" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="Gender" Type="bit" />
+          <Property Name="DOB" Type="date" Nullable="false" />
+          <Property Name="Image_Path" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OrderDetails">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="Order_ID" />
+          </Key>
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="Order_ID" Type="int" Nullable="false" />
+          <Property Name="Unit_Price" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderStatus" Type="tinyint" Nullable="false" />
+          <Property Name="TotalAmount" Type="money" Nullable="false" />
+          <Property Name="Order_Date" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Due_Date" Type="datetime2" Precision="7" />
+          <Property Name="DiscountByCoupon" Type="real" Nullable="false" />
+          <Property Name="CustomerID" Type="int" Nullable="false" />
+          <Property Name="Payment_Type" Type="tinyint" Nullable="false" />
+          <Property Name="SubTotal" Type="decimal" Precision="8" Scale="4" Nullable="false" />
+          <Property Name="Tax" Type="decimal" Precision="8" Scale="4" Nullable="false" />
+          <Property Name="ShippingFee" Type="decimal" Precision="8" Scale="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Product_Id" />
+          </Key>
+          <Property Name="Product_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Product_Name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Product_Description" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Product_Price" Type="money" Nullable="false" />
+          <Property Name="Product_SKU" Type="int" Nullable="false" />
+          <Property Name="Product_Weight" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Category_Id" Type="int" Nullable="false" />
+          <Property Name="Supplier_Name" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="Publish_Date" Type="date" />
+          <Property Name="Product_ImagePath" Type="varchar(max)" Nullable="false" />
+          <Property Name="UnitOnOrder" Type="int" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Role_Id" />
+          </Key>
+          <Property Name="Role_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Role_Name" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TransactionDetails">
+          <Key>
+            <PropertyRef Name="TransactionId" />
+          </Key>
+          <Property Name="NameOnCard" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="CVV" Type="smallint" Nullable="false" />
+          <Property Name="ExpirationDate" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CardNumber" Type="bigint" Nullable="false" />
+          <Property Name="TransactionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="orderId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserRolsMapping">
+          <Key>
+            <PropertyRef Name="UserRol_Id" />
+          </Key>
+          <Property Name="UserRol_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdminId" Type="int" />
+          <Property Name="RoleId" Type="int" />
+        </EntityType>
+        <Association Name="FK__OrderDeta__Order__4D94879B">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+          <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="OrderID" />
+            </Principal>
+            <Dependent Role="OrderDetails">
+              <PropertyRef Name="Order_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrderDeta__Produ__4CA06362">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Product_Id" />
+            </Principal>
+            <Dependent Role="OrderDetails">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Orders__Customer__4AB81AF0">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+          <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="Customer_ID" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="CustomerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Product__Categor__34C8D9D1">
+          <End Role="Category" Type="Self.Category" Multiplicity="1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Category_ID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="Category_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserRolsM__Admin__44FF419A">
+          <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+          <End Role="UserRolsMapping" Type="Self.UserRolsMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin">
+              <PropertyRef Name="Admin_Id" />
+            </Principal>
+            <Dependent Role="UserRolsMapping">
+              <PropertyRef Name="AdminId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserRolsM__RoleI__45F365D3">
+          <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
+          <End Role="UserRolsMapping" Type="Self.UserRolsMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="Role_Id" />
+            </Principal>
+            <Dependent Role="UserRolsMapping">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Address_Orders">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+          <End Role="Address" Type="Self.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="OrderID" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="orderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransactionDetails_Orders">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+          <End Role="TransactionDetails" Type="Self.TransactionDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="OrderID" />
+            </Principal>
+            <Dependent Role="TransactionDetails">
+              <PropertyRef Name="orderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BrandedKartModelStoreContainer">
+          <EntitySet Name="Address" EntityType="Self.Address" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderDetails" EntityType="Self.OrderDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TransactionDetails" EntityType="Self.TransactionDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserRolsMapping" EntityType="Self.UserRolsMapping" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__OrderDeta__Order__4D94879B" Association="Self.FK__OrderDeta__Order__4D94879B">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrderDetails" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderDeta__Produ__4CA06362" Association="Self.FK__OrderDeta__Produ__4CA06362">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="OrderDetails" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Orders__Customer__4AB81AF0" Association="Self.FK__Orders__Customer__4AB81AF0">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Product__Categor__34C8D9D1" Association="Self.FK__Product__Categor__34C8D9D1">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserRolsM__Admin__44FF419A" Association="Self.FK__UserRolsM__Admin__44FF419A">
+            <End Role="Admin" EntitySet="Admin" />
+            <End Role="UserRolsMapping" EntitySet="UserRolsMapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserRolsM__RoleI__45F365D3" Association="Self.FK__UserRolsM__RoleI__45F365D3">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="UserRolsMapping" EntitySet="UserRolsMapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Address_Orders" Association="Self.FK_Address_Orders">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="Address" EntitySet="Address" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransactionDetails_Orders" Association="Self.FK_TransactionDetails_Orders">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="TransactionDetails" EntitySet="TransactionDetails" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BrandedKartModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="BrandedKartEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admins" EntityType="BrandedKartModel.Admin" />
+          <EntitySet Name="Categories" EntityType="BrandedKartModel.Category" />
+          <EntitySet Name="Customers" EntityType="BrandedKartModel.Customer" />
+          <EntitySet Name="Products" EntityType="BrandedKartModel.Product" />
+          <EntitySet Name="Roles" EntityType="BrandedKartModel.Role" />
+          <EntitySet Name="UserRolsMappings" EntityType="BrandedKartModel.UserRolsMapping" />
+          <AssociationSet Name="FK__UserRolsM__Admin__44FF419A" Association="BrandedKartModel.FK__UserRolsM__Admin__44FF419A">
+            <End Role="Admin" EntitySet="Admins" />
+            <End Role="UserRolsMapping" EntitySet="UserRolsMappings" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Product__Categor__34C8D9D1" Association="BrandedKartModel.FK__Product__Categor__34C8D9D1">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserRolsM__RoleI__45F365D3" Association="BrandedKartModel.FK__UserRolsM__RoleI__45F365D3">
+            <End Role="Role" EntitySet="Roles" />
+            <End Role="UserRolsMapping" EntitySet="UserRolsMappings" />
+          </AssociationSet>
+          <EntitySet Name="Addresses" EntityType="BrandedKartModel.Address" />
+          <EntitySet Name="OrderDetails" EntityType="BrandedKartModel.OrderDetail" />
+          <AssociationSet Name="FK__OrderDeta__Produ__4CA06362" Association="BrandedKartModel.FK__OrderDeta__Produ__4CA06362">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <EntitySet Name="Orders" EntityType="BrandedKartModel.Order" />
+          <EntitySet Name="TransactionDetails" EntityType="BrandedKartModel.TransactionDetail" />
+          <AssociationSet Name="FK_Address_Orders" Association="BrandedKartModel.FK_Address_Orders">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="Address" EntitySet="Addresses" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Orders__Customer__4AB81AF0" Association="BrandedKartModel.FK__Orders__Customer__4AB81AF0">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderDeta__Order__4D94879B" Association="BrandedKartModel.FK__OrderDeta__Order__4D94879B">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransactionDetails_Orders" Association="BrandedKartModel.FK_TransactionDetails_Orders">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="TransactionDetail" EntitySet="TransactionDetails" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="Admin_Id" />
+          </Key>
+          <Property Name="Admin_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Admin_Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Admin_Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="UserRolsMappings" Relationship="BrandedKartModel.FK__UserRolsM__Admin__44FF419A" FromRole="Admin" ToRole="UserRolsMapping" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Category_ID" />
+          </Key>
+          <Property Name="Category_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Category_Title" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Category_Description" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Products" Relationship="BrandedKartModel.FK__Product__Categor__34C8D9D1" FromRole="Category" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Customer_ID" />
+          </Key>
+          <Property Name="Customer_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Full_Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Customer_Password" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Phone_Number" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="Gender" Type="Boolean" />
+          <Property Name="DOB" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Image_Path" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Orders" Relationship="BrandedKartModel.FK__Orders__Customer__4AB81AF0" FromRole="Customer" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Product_Id" />
+          </Key>
+          <Property Name="Product_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Product_Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Product_Description" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Product_Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Product_SKU" Type="Int32" Nullable="false" />
+          <Property Name="Product_Weight" Type="Decimal" Nullable="false" Precision="6" Scale="2" />
+          <Property Name="Category_Id" Type="Int32" Nullable="false" />
+          <Property Name="Supplier_Name" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="Publish_Date" Type="DateTime" Precision="0" />
+          <Property Name="Product_ImagePath" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="UnitOnOrder" Type="Int32" />
+          <NavigationProperty Name="Category" Relationship="BrandedKartModel.FK__Product__Categor__34C8D9D1" FromRole="Product" ToRole="Category" />
+          <NavigationProperty Name="OrderDetails" Relationship="BrandedKartModel.FK__OrderDeta__Produ__4CA06362" FromRole="Product" ToRole="OrderDetail" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Role_Id" />
+          </Key>
+          <Property Name="Role_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Role_Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="UserRolsMappings" Relationship="BrandedKartModel.FK__UserRolsM__RoleI__45F365D3" FromRole="Role" ToRole="UserRolsMapping" />
+        </EntityType>
+        <EntityType Name="UserRolsMapping">
+          <Key>
+            <PropertyRef Name="UserRol_Id" />
+          </Key>
+          <Property Name="UserRol_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdminId" Type="Int32" />
+          <Property Name="RoleId" Type="Int32" />
+          <NavigationProperty Name="Admin" Relationship="BrandedKartModel.FK__UserRolsM__Admin__44FF419A" FromRole="UserRolsMapping" ToRole="Admin" />
+          <NavigationProperty Name="Role" Relationship="BrandedKartModel.FK__UserRolsM__RoleI__45F365D3" FromRole="UserRolsMapping" ToRole="Role" />
+        </EntityType>
+        <Association Name="FK__UserRolsM__Admin__44FF419A">
+          <End Type="BrandedKartModel.Admin" Role="Admin" Multiplicity="0..1" />
+          <End Type="BrandedKartModel.UserRolsMapping" Role="UserRolsMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin">
+              <PropertyRef Name="Admin_Id" />
+            </Principal>
+            <Dependent Role="UserRolsMapping">
+              <PropertyRef Name="AdminId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Product__Categor__34C8D9D1">
+          <End Type="BrandedKartModel.Category" Role="Category" Multiplicity="1" />
+          <End Type="BrandedKartModel.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Category_ID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="Category_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserRolsM__RoleI__45F365D3">
+          <End Type="BrandedKartModel.Role" Role="Role" Multiplicity="0..1" />
+          <End Type="BrandedKartModel.UserRolsMapping" Role="UserRolsMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="Role_Id" />
+            </Principal>
+            <Dependent Role="UserRolsMapping">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="AddressId" />
+          </Key>
+          <Property Name="AddressLine1" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AddressLine2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Postal" Type="Int16" Nullable="false" />
+          <Property Name="Country" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AddressId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="orderId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="BrandedKartModel.FK_Address_Orders" FromRole="Address" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="Order_ID" />
+          </Key>
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="Order_ID" Type="Int32" Nullable="false" />
+          <Property Name="Unit_Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <NavigationProperty Name="Product" Relationship="BrandedKartModel.FK__OrderDeta__Produ__4CA06362" FromRole="OrderDetail" ToRole="Product" />
+          <NavigationProperty Name="Order" Relationship="BrandedKartModel.FK__OrderDeta__Order__4D94879B" FromRole="OrderDetail" ToRole="Order" />
+        </EntityType>
+        <Association Name="FK__OrderDeta__Produ__4CA06362">
+          <End Type="BrandedKartModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="BrandedKartModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Product_Id" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderStatus" Type="Byte" Nullable="false" />
+          <Property Name="TotalAmount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Order_Date" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="Due_Date" Type="DateTime" Precision="7" />
+          <Property Name="DiscountByCoupon" Type="Single" Nullable="false" />
+          <Property Name="CustomerID" Type="Int32" Nullable="false" />
+          <Property Name="Payment_Type" Type="Byte" Nullable="false" />
+          <Property Name="SubTotal" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+          <Property Name="Tax" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+          <Property Name="ShippingFee" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+          <NavigationProperty Name="Addresses" Relationship="BrandedKartModel.FK_Address_Orders" FromRole="Order" ToRole="Address" />
+          <NavigationProperty Name="Customer" Relationship="BrandedKartModel.FK__Orders__Customer__4AB81AF0" FromRole="Order" ToRole="Customer" />
+          <NavigationProperty Name="OrderDetails" Relationship="BrandedKartModel.FK__OrderDeta__Order__4D94879B" FromRole="Order" ToRole="OrderDetail" />
+          <NavigationProperty Name="TransactionDetails" Relationship="BrandedKartModel.FK_TransactionDetails_Orders" FromRole="Order" ToRole="TransactionDetail" />
+        </EntityType>
+        <EntityType Name="TransactionDetail">
+          <Key>
+            <PropertyRef Name="TransactionId" />
+          </Key>
+          <Property Name="NameOnCard" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="CVV" Type="Int16" Nullable="false" />
+          <Property Name="ExpirationDate" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CardNumber" Type="Int64" Nullable="false" />
+          <Property Name="TransactionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="orderId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="BrandedKartModel.FK_TransactionDetails_Orders" FromRole="TransactionDetail" ToRole="Order" />
+        </EntityType>
+        <Association Name="FK_Address_Orders">
+          <End Type="BrandedKartModel.Order" Role="Order" Multiplicity="1" />
+          <End Type="BrandedKartModel.Address" Role="Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="OrderID" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="orderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Orders__Customer__4AB81AF0">
+          <End Type="BrandedKartModel.Customer" Role="Customer" Multiplicity="1" />
+          <End Type="BrandedKartModel.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="Customer_ID" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="CustomerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrderDeta__Order__4D94879B">
+          <End Type="BrandedKartModel.Order" Role="Order" Multiplicity="1" />
+          <End Type="BrandedKartModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="OrderID" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="Order_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransactionDetails_Orders">
+          <End Type="BrandedKartModel.Order" Role="Order" Multiplicity="1" />
+          <End Type="BrandedKartModel.TransactionDetail" Role="TransactionDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="OrderID" />
+            </Principal>
+            <Dependent Role="TransactionDetail">
+              <PropertyRef Name="orderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BrandedKartModelStoreContainer" CdmEntityContainer="BrandedKartEntities">
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="BrandedKartModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="Admin_Password" ColumnName="Admin_Password" />
+                <ScalarProperty Name="Admin_Name" ColumnName="Admin_Name" />
+                <ScalarProperty Name="Admin_Id" ColumnName="Admin_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="BrandedKartModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="Category_Description" ColumnName="Category_Description" />
+                <ScalarProperty Name="Category_Title" ColumnName="Category_Title" />
+                <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="BrandedKartModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="Image_Path" ColumnName="Image_Path" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Phone_Number" ColumnName="Phone_Number" />
+                <ScalarProperty Name="Customer_Password" ColumnName="Customer_Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+                <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="BrandedKartModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="UnitOnOrder" ColumnName="UnitOnOrder" />
+                <ScalarProperty Name="Product_ImagePath" ColumnName="Product_ImagePath" />
+                <ScalarProperty Name="Publish_Date" ColumnName="Publish_Date" />
+                <ScalarProperty Name="Supplier_Name" ColumnName="Supplier_Name" />
+                <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+                <ScalarProperty Name="Product_Weight" ColumnName="Product_Weight" />
+                <ScalarProperty Name="Product_SKU" ColumnName="Product_SKU" />
+                <ScalarProperty Name="Product_Price" ColumnName="Product_Price" />
+                <ScalarProperty Name="Product_Description" ColumnName="Product_Description" />
+                <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+                <ScalarProperty Name="Product_Id" ColumnName="Product_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="BrandedKartModel.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="Role_Name" ColumnName="Role_Name" />
+                <ScalarProperty Name="Role_Id" ColumnName="Role_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRolsMappings">
+            <EntityTypeMapping TypeName="BrandedKartModel.UserRolsMapping">
+              <MappingFragment StoreEntitySet="UserRolsMapping">
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+                <ScalarProperty Name="UserRol_Id" ColumnName="UserRol_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Addresses">
+            <EntityTypeMapping TypeName="BrandedKartModel.Address">
+              <MappingFragment StoreEntitySet="Address">
+                <ScalarProperty Name="orderId" ColumnName="orderId" />
+                <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Postal" ColumnName="Postal" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+                <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderDetails">
+            <EntityTypeMapping TypeName="BrandedKartModel.OrderDetail">
+              <MappingFragment StoreEntitySet="OrderDetails">
+                <ScalarProperty Name="Unit_Price" ColumnName="Unit_Price" />
+                <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="BrandedKartModel.Order">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="ShippingFee" ColumnName="ShippingFee" />
+                <ScalarProperty Name="Tax" ColumnName="Tax" />
+                <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+                <ScalarProperty Name="Payment_Type" ColumnName="Payment_Type" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="DiscountByCoupon" ColumnName="DiscountByCoupon" />
+                <ScalarProperty Name="Due_Date" ColumnName="Due_Date" />
+                <ScalarProperty Name="Order_Date" ColumnName="Order_Date" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TransactionDetails">
+            <EntityTypeMapping TypeName="BrandedKartModel.TransactionDetail">
+              <MappingFragment StoreEntitySet="TransactionDetails">
+                <ScalarProperty Name="orderId" ColumnName="orderId" />
+                <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+                <ScalarProperty Name="CVV" ColumnName="CVV" />
+                <ScalarProperty Name="NameOnCard" ColumnName="NameOnCard" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

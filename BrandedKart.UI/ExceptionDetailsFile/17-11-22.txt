@@ -1,0 +1,478 @@
+-----------Exception Details on  17/11/2022 01:31:15 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 01:31:15 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/CustomerCart/ViewCart' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/CustomerCart/ViewCart
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  17/11/2022 01:37:30 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 01:37:30 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/product/details' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/product/details?productId=4
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  17/11/2022 01:37:38 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 01:37:38 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/product/details' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/product/details?productId=3
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  17/11/2022 01:45:00 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 01:45:00 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/CustomerCart/CartView' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/CustomerCart/CartView
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  17/11/2022 01:45:33 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 01:45:33 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/product/details' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/product/details?productId=5
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  17/11/2022 01:54:42 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 01:54:42 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/CustomerCart/CartView' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/CustomerCart/CartView
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  17/11/2022 01:55:04 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 01:55:04 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/product/details' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/product/details?productId=4
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  17/11/2022 01:56:44 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 01:56:44 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Product/FilterProduct/SingleProduct' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Product/FilterProduct/SingleProduct
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  17/11/2022 01:57:17 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 01:57:17 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/CustomerCart/CartView' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/CustomerCart/CartView
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  17/11/2022 01:57:26 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 01:57:26 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/product/details' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/product/details?productId=4
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  17/11/2022 02:02:47 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 02:02:47 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/product/details' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/product/details?productId=5
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  17/11/2022 02:08:56 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 02:08:56 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/CustomerCart/CartView' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/CustomerCart/CartView
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  17/11/2022 02:09:06 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 02:09:06 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/product/details' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/product/details?productId=3
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  17/11/2022 02:10:35 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 02:10:35 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Product/FilterProduct/SingleProduct' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Product/FilterProduct/SingleProduct
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  17/11/2022 02:11:31 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 02:11:31 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Product/FilterProduct/SingleProduct' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Product/FilterProduct/SingleProduct
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  17/11/2022 02:12:01 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 02:12:01 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/product/details' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/product/details?productId=3
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  17/11/2022 02:20:46 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 02:20:46 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Product/FilterProduct/SingleProduct' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Product/FilterProduct/SingleProduct
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  17/11/2022 02:22:56 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 02:22:56 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Product/FilterProduct/SingleProduct' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Product/FilterProduct/SingleProduct
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  17/11/2022 02:31:38 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 02:31:38 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Customer/CustomerCart/CartView' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Customer/CustomerCart/CartView
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  17/11/2022 02:37:23 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 02:37:23 ص
+
+Error Line No : Result)
+
+Error Message: InvalidOperationException
+
+Exception Type: System.InvalidOperationException
+
+Error Location : The partial view 'CategoryFilter' was not found or no view engine supports the searched locations. The following locations were searched:
+~/Areas/Product/Views/FilterProduct/CategoryFilter.aspx
+~/Areas/Product/Views/FilterProduct/CategoryFilter.ascx
+~/Areas/Product/Views/Shared/CategoryFilter.aspx
+~/Areas/Product/Views/Shared/CategoryFilter.ascx
+~/Views/FilterProduct/CategoryFilter.aspx
+~/Views/FilterProduct/CategoryFilter.ascx
+~/Views/Shared/CategoryFilter.aspx
+~/Views/Shared/CategoryFilter.ascx
+~/Areas/Product/Views/FilterProduct/CategoryFilter.cshtml
+~/Areas/Product/Views/FilterProduct/CategoryFilter.vbhtml
+~/Areas/Product/Views/Shared/CategoryFilter.cshtml
+~/Areas/Product/Views/Shared/CategoryFilter.vbhtml
+~/Views/FilterProduct/CategoryFilter.cshtml
+~/Views/FilterProduct/CategoryFilter.vbhtml
+~/Views/Shared/CategoryFilter.cshtml
+~/Views/Shared/CategoryFilter.vbhtml
+
+ Error Page Url: https://localhost:44342/Products?productName=
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  17/11/2022 03:28:48 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 17/11/2022 03:28:48 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/Product/FilterProduct/GetCategoryFilteredProducts' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/Product/FilterProduct/GetCategoryFilteredProducts
+
+
+--------------------------------*End*------------------------------------------
+
+
+

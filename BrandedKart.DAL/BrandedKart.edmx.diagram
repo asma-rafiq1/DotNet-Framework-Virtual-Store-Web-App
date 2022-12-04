@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2b73e92de54d4af181b681da2d530ea9" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="BrandedKartModel.Admin" Width="1.5" PointX="5.75" PointY="9" />
+        <EntityTypeShape EntityType="BrandedKartModel.Category" Width="1.5" PointX="0.75" PointY="14.25" />
+        <EntityTypeShape EntityType="BrandedKartModel.Customer" Width="1.5" PointX="0.75" PointY="9" />
+        <EntityTypeShape EntityType="BrandedKartModel.Product" Width="1.5" PointX="3" PointY="13.375" />
+        <EntityTypeShape EntityType="BrandedKartModel.Role" Width="1.5" PointX="5.75" PointY="6.125" />
+        <EntityTypeShape EntityType="BrandedKartModel.UserRolsMapping" Width="1.5" PointX="8" PointY="5.875" />
+        <AssociationConnector Association="BrandedKartModel.FK__UserRolsM__Admin__44FF419A" />
+        <AssociationConnector Association="BrandedKartModel.FK__Product__Categor__34C8D9D1" />
+        <AssociationConnector Association="BrandedKartModel.FK__UserRolsM__RoleI__45F365D3" />
+        <EntityTypeShape EntityType="BrandedKartModel.Address" Width="1.5" PointX="5.25" PointY="2.25" />
+        <EntityTypeShape EntityType="BrandedKartModel.OrderDetail" Width="1.5" PointX="8.25" PointY="8.875" />
+        <AssociationConnector Association="BrandedKartModel.FK__OrderDeta__Produ__4CA06362" />
+        <EntityTypeShape EntityType="BrandedKartModel.Order" Width="1.5" PointX="3" PointY="18.375" />
+        <EntityTypeShape EntityType="BrandedKartModel.TransactionDetail" Width="1.5" PointX="5.25" PointY="19.25" />
+        <AssociationConnector Association="BrandedKartModel.FK_Address_Orders" />
+        <AssociationConnector Association="BrandedKartModel.FK__Orders__Customer__4AB81AF0" />
+        <AssociationConnector Association="BrandedKartModel.FK__OrderDeta__Order__4D94879B" />
+        <AssociationConnector Association="BrandedKartModel.FK_TransactionDetails_Orders" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

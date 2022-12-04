@@ -1,0 +1,22 @@
+-----------Exception Details on  29/10/2022 01:19:32 ص-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 29/10/2022 01:19:32 ص
+
+Error Line No : nously)
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : The controller for path '/403/NotFound' was not found or does not implement IController.
+
+ Error Page Url: https://localhost:44342/403/NotFound
+
+
+--------------------------------*End*------------------------------------------
+
+
+

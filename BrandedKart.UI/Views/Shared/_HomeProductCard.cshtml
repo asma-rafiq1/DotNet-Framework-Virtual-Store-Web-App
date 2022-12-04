@@ -1,0 +1,101 @@
+﻿@model IEnumerable<Brandedkart.DTO.Product.ProductDTO>
+
+
+@if (Model.Any())
+{
+    foreach (var product in Model)
+    {
+        <div class="col-md-4">
+          
+                <div class='container-fluid'>
+                   
+                        <div class="card mx-auto col-md-3 col-10 mt-5">
+                            <a href="@Url.Action("details","product",new { productId= product.Product_ID})">
+                                <img class='img-thumbnail'
+                                     src="@Url.Content(product.Product_ImagePath)" />
+                            </a>
+                            <div class="card-body text-center mx-auto">
+                                <div class='cvp'>
+                                    <a href="@Url.Action("details","product",new { productId= product.Product_ID})">
+                                        <h5 class="card-title fw-bold">@product.Product_Name</h5>
+                                        <p class="card-text fw-bold">OMR @product.Product_Price</p>
+                                    </a>
+                                        @using (Ajax.BeginForm("AddCart", "Customer", new { area = "" }, new AjaxOptions { HttpMethod = "POST" }))
+                                        {
+                                            <div class="row mt-3 ">
+                                                @Html.Hidden("ProductID", product.Product_ID)
+                                                <div class="col-7">
+                                                    <button class="btn cart px-auto rounded" type="submit">
+                                                        <i class="bi-cart-fill me-1"></i>
+                                                        Add to cart
+                                                    </button>
+                                                </div>
+                                                <div class="col-4">
+                                                    @Html.TextBox("Quantity", 1, new { @class = "form-control text-dark px-2 me-3", type = "number", style = "max-width: 7rem" })
+                                                </div>
+
+                                            </div>
+
+                                        }
+                                        @*<a class="btn cart px-auto">ADD TO CART</a>*@
+                                </div>
+                            </div>
+                        </div>
+                  
+                </div>
+              
+        </div>
+
+
+            }
+            }
+
+
+            <style>
+                
+
+                .details {
+                    border: 1.5px solid grey;
+                    color: #212121;
+                    width: 100%;
+                    height: auto;
+                    box-shadow: 0px 0px 10px #212121;
+                }
+
+                .cart {
+                    background-color: #212121;
+                    color: white;
+                    font-size: 12px;
+                    font-weight: 500;
+                    width: 120px;
+                    height: 39px;
+                    padding-top: 9px;
+                    box-shadow: 0px 2px 5px #212121;
+                }
+
+                .card {
+                    background-color:#fff;
+                    width:fit-content;
+                }
+
+                .card-body {
+                    width: fit-content;
+                }
+
+                .btn {
+                    border-radius: 0;
+                }
+
+                .img-thumbnail {
+                    border: none;
+                    width:150px;
+                    height:150px;
+                    margin-left:35px;
+                }
+
+                .card {
+                    box-shadow: 0 10px 15px rgba(0, 0, 0, .2);
+                    border-radius: 5px;
+                    padding-bottom: 10px;
+                }
+            </style>

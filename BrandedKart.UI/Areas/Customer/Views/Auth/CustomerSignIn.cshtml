@@ -1,0 +1,101 @@
+﻿@model Brandedkart.DTO.Customer.CustomerDTO
+
+@{
+    ViewBag.Title = "CustomerSignIn";
+}
+
+
+<section class="vh-90">
+    <div class="container py-5 h-100">
+        <h1 class="text-center my-5">Signin With <span style="color: #4682B4; " class="fw-bold">Branded KArt</span></h1>
+        <div class="row d-flex align-items-center justify-content-center h-100">
+            <div class="col-4">
+                <img width="400" height="400" style="background-size:cover;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRA1FKVqXrROdmHDhbrB9Plpiov5GxNAmRBSgpaonJ8LFUr4lMKUmSfr333rV-GGB6bSQ&usqp=CAU"
+                     class="img-fluid" alt="Phone image"/>
+            </div>
+
+            <div class="col-5">
+
+                @Html.ValidationSummary(true, "Error", new { @class = "alert alert-danger" }, null)
+
+
+
+                @using (Html.BeginForm("", "", new { area = "Customer", action = "CustomerSignIn", controller = "AuthController" }, FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-outline mb-4">
+                        @Html.LabelFor(cust => cust.Email, new { @class = "form-label" })
+                        @Html.TextBoxFor(cust => cust.Email, new { @class = "form-control form-control-lg" })
+                        @Html.ValidationMessageFor(cust => cust.Email)
+
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        @Html.LabelFor(cust => cust.Customer_Password, new { @class = "form-label" })
+                        @Html.PasswordFor(cust => cust.Customer_Password, new { @class = "form-control form-control-lg" })
+                        @Html.ValidationMessageFor(cust => cust.Customer_Password)
+
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <!-- Checkbox -->
+                        <div class="form-check">
+
+                            @Html.CheckBoxFor(cust => cust.RememberMe, new { @class = "form-check-input", @checked = "checked" })
+                            @Html.LabelFor(cust => cust.RememberMe, new { @class = "form-check-label" })
+
+                        </div>
+                        <a href="#!">Forgot password?</a>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-dark btn-m btn-block">Sign in</button>
+                }
+                <div class="divider d-flex align-items-center my-4">
+                    <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+                </div>
+
+                <a class="btn btn-primary btn-m btn-block" style="background-color: #3b5998" href="#!"
+                   role="button">
+                    <i class="fab fa-facebook-f me-2"></i>Continue with Facebook
+                </a>
+                <a class="btn btn-primary btn-m btn-block" style="background-color: #55acee" href="#!"
+                   role="button">
+                    <i class="fab fa-twitter me-2"></i>Continue with Twitter
+                </a>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    span.field-validation-error {
+        color: red !important;
+    }
+
+    span #Full_Name-error {
+        color: red !important;
+    }
+
+    .field-validation-valid {
+        color: red !important;
+    }
+
+    .input-validation-error {
+        border: 1px solid #ff0000 !important;
+        background-color: #ffeeee !important;
+    }
+</style>
+
+@section scripts{
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+
+
+
+

@@ -1,0 +1,63 @@
+﻿@model Brandedkart.DTO.User.AdminDTO
+
+@{
+    ViewBag.Title = "Admin Login";
+}
+
+
+
+@section scripts{
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+
+<section class="vh-100">
+    <div class="container py-5 h-100">
+        <div class="row d-flex align-items-center justify-content-center h-100">
+
+            <div class="col-4">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+                     class="img-fluid" alt="Phone image">
+            </div>
+            <div class="col-3">
+                @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" }, null)
+                <br />
+
+
+                @using (Html.BeginForm("", "", new { area = "Admin", action = "AdminLogin", controller = "AdminAuthController" }, FormMethod.Post))
+                {
+
+                    <div class="form-outline mb-4">
+                        @Html.LabelFor(admin => admin.Admin_Name, new { @class = "form-label" })
+                        @Html.TextBoxFor(admin => admin.Admin_Name, new { @class = "form-control form-control-lg" })
+                        @Html.ValidationMessageFor(admin => admin.Admin_Name)
+
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        @Html.LabelFor(admin => admin.Admin_Password, new { @class = "form-label" })
+                        @Html.TextBoxFor(admin => admin.Admin_Password, new { @class = "form-control form-control-lg" })
+                        @Html.ValidationMessageFor(admin => admin.Admin_Password)
+
+                    </div>
+
+
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary btn-m btn-block">Sign in</button>
+                }
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+

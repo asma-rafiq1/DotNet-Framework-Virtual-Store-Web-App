@@ -1,0 +1,205 @@
+﻿@model Brandedkart.DTO.Customer.CustomerDTO
+
+@{
+    ViewBag.Title = "CustomerRegisteration";
+}
+
+<section class="vh-100" style="margin-bottom:200px">
+    <div class="container py-5 h-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-7">
+                <div class="border rounded-3 p-4" style="border-radius: 15px;">
+                    <div class="card-body p-4 p-md-5">
+                        <h1 class="text-center my-5">Signup With <span style="color: #4682B4; " class="fw-bold">Branded KArt</span></h1>
+
+                        <div class="row justify-content-center mb-4">
+                            <div class="col-5 offset-2">
+                                <img src="https://riverlegacy.org/wp-content/uploads/2021/07/blank-profile-photo.jpeg"
+                                     class="rounded-circle border-1 border-dark"
+                                     id="productimg"
+                                     onchange="previewImage(this)"
+                                     width="200"
+                                     height="30" />
+                            </div>
+
+                        </div>
+                        @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" }, null)
+                        <br />
+                        @using (Html.BeginForm("", "", new { area = "Customer", action = "CustomerRegisteration", controller = "AuthController" }, FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    @Html.AntiForgeryToken()
+                                    <div class="form-outline">
+                                        @Html.LabelFor(cust => cust.Full_Name, new { @class = "form-label" })
+                                        @Html.TextBoxFor(cust => cust.Full_Name, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(cust => cust.Full_Name)
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 mb-4">
+
+                                    <div class="form-outline">
+                                        @Html.LabelFor(cust => cust.Email, new { @class = "form-label" })
+                                        @Html.TextBoxFor(cust => cust.Email, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(cust => cust.Email)
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+
+                                    <div class="form-outline">
+                                        @Html.LabelFor(cust => cust.Customer_Password, new { @class = "form-label" })
+                                        @Html.PasswordFor(cust => cust.Customer_Password, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(cust => cust.Customer_Password)
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 mb-4">
+
+                                    <div class="form-outline">
+                                        @Html.LabelFor(cust => cust.confirmPassword, new { @class = "form-label" })
+                                        @Html.PasswordFor(cust => cust.confirmPassword, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(cust => cust.confirmPassword)
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                                    <div class="form-outline datepicker w-100">
+                                        @Html.LabelFor(cust => cust.DOB, new { @class = "form-label" })
+                                        @Html.TextBoxFor(cust => cust.DOB, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(cust => cust.DOB)
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 mb-4">
+
+                                    <h6 class="mb-2 pb-1">Gender: </h6>
+
+                                    <div class="form-check form-check-inline">
+
+                                        @Html.RadioButtonFor(cust => cust.Gender, true, new { @class = "form-check-input" })
+                                        <label class="form-check-label">Male</label>
+
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButtonFor(cust => cust.Gender, false, new { @class = "form-check-input" })
+                                        <label class="form-check-label">Female</label>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-4 pb-2">
+
+                                    <div class="form-outline">
+                                        @Html.LabelFor(cust => cust.Phone_Number, new { @class = "form-label" })
+                                        @Html.TextBoxFor(cust => cust.Phone_Number, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(cust => cust.Phone_Number)
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4 pb-2">
+                                    @Html.LabelFor(cust => cust.UserImage, htmlAttributes: new { @class = "form-label" })
+
+                                    <input type="file" id="UserImage" onchange="previewImage(this)" name="UserImage" class="form-control form-control-lg" />
+
+
+
+                                </div>
+                            </div>
+
+
+
+                            <div class="mt-4 pt-2">
+                                <input class="btn btn-dark btn-lg" type="submit" value="Register" />
+                            </div>
+
+
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<style>
+    span.field-validation-error {
+        color: red !important;
+    }
+
+    span #Full_Name-error {
+        color: red !important;
+    }
+
+    .field-validation-valid {
+        color: red !important;
+    }
+
+    .input-validation-error {
+        border: 1px solid #ff0000 !important;
+        background-color: #ffeeee !important;
+    }
+</style>
+
+
+@section StyleSheets{
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.13.2/themes/dark-hive/jquery-ui.css" rel="stylesheet" />
+}
+
+
+
+@section scripts{
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+  
+    @*calender for datepicker field*@
+    @*<script src="~/Scripts/jquery-ui-1.13.2.min.js"></script>*@
+    <script src="~/lib/jqueryui/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#DOB").datepicker(
+                {
+                    dateFormat: "yy-mm-dd",
+
+                }
+            );
+        })
+    </script>
+
+    <script>
+        var previewUserImage = document.getElementById("productimg");
+        function previewImage(input) {
+            var fileReader = new FileReader();
+            fileReader.readAsDataURL(input.files[0]);
+
+            fileReader.onload = function (event) {
+                previewUserImage.src = event.target.result;
+
+            }
+        }
+    </script>
+}
+
+
+
+
+
+
+

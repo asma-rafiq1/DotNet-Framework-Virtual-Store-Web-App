@@ -1,0 +1,50 @@
+﻿@model IPagedList<Brandedkart.DTO.Product.ProductDTO>
+@using PagedList.Mvc;
+@using PagedList;
+
+<div class="container py-5">
+    <div class="row text-center text-dark mb-5">
+        <div class="col-lg-7 mx-auto">
+            <h1 class="display-4 fw-bold">Product List</h1>
+        </div>
+    </div>
+    <div class="row">
+        @Html.Action("GetCategories")
+       
+          
+        <div class="col-lg-8 mx-auto">
+            <div class="row mb-5">
+                <div class="col-lg-3">
+                    
+                    <div class="btn-group dropend">
+                        <button type="button" class="btn btn-outline-light border-1 border-dark border text-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Order By
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="#">Name</a></li>
+                            <li><a class="dropdown-item" href="#">Price</a></li>
+                            <li><a class="dropdown-item" href="#">Latest Products</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Rating</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+         
+            <!-- List group-->
+            <ul class="list-group" id="productsList">
+                <!-- list group items-->
+              
+                        @{ Html.RenderPartial("_ProductCardOne", Model); }
+                 
+
+            </ul> <!-- End -->
+        </div>
+        </div>
+    @Html.PagedListPager(Model, page => Url.Action("","Products", new { page, area = "" }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded,DisplayPageCountAndCurrentLocation=true })
+</div>
+
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+

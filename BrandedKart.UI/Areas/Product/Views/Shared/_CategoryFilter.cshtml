@@ -1,0 +1,39 @@
+﻿@model List<Brandedkart.DTO.Product.CategoryDTO>
+
+<div class="col-lg-3">
+    <h5 class="p-1 border-bottom fw-bold">Category</h5>
+
+    <div id="categoryList">
+        @if (Model.Any())
+        {
+
+            for (int i = 0; i < Model.Count(); i++)
+            {
+
+                <div>
+                    @Ajax.ActionLink(@Model[i].Category_Title, "GetCategoryFilteredProducts", new { categoryId = @Model[i].Category_ID }, new AjaxOptions() { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "productsList" })
+                </div>
+            }
+            <br />
+
+
+
+
+        }
+    </div>
+
+<div class="mt-5">
+    <label for="customRange2" class="form-label">Filter By Price</label>
+    <input type="range" class="form-range" min="1" max="300" id="customRange2">
+</div>
+
+</div>
+
+<script>
+    $(function () {
+        function OnSuccess() {
+            $("productsList").empty();
+        }
+    })
+   
+</script>
